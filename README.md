@@ -21,7 +21,7 @@ Each lesson is a CMIL program in English, with English names and texts, and the 
 
 A title, a description or a task names a command by its id in braces, like `{print}`, and is shown with the word of the command in the language of the page. Every input of a lesson comes after a `print` that says what to type.
 
-`course.json` has the order of the topics and of their lessons, the English name of each topic, its short name in its group, like `{while}`, and the groups of topics, like the loops.
+`course.json` has the order of the topics and of their lessons, the English name of each topic, its short name in its group, like `{while}`, and the groups of topics, like the loops. Each topic and group has the icon of its subject, by its name in the solid style of [Font Awesome](https://fontawesome.com/search?ic=free&o=r), like `list-ol` for `for`.
 
 ## The lessons in each language
 
@@ -55,6 +55,7 @@ checkProgram(program, solution, 'hy-AM', answers); // {passed: true} or the firs
 ```
 
 - `TOPICS`, `GROUPS`, `SHORT_TOPICS`, `LESSON_IDS`, `LESSONS` and `EXERCISES`: the course, in English.
+- `TOPIC_ICON_NAMES`: the icon of each topic and group, a name of Font Awesome's solid style, which a page makes `fa-solid fa-<name>` or its own icon of that name.
 - `LESSON_LANGUAGES`, `loadLessonTexts(language)` and `lessonTextsOf(language)`: the texts of each language, loaded when it is chosen, each a module of its own, which a bundler makes a file of its own; English needs no loading.
 - `lessonCode(lesson, language)`, `lessonInputs(lesson, language)`, `exerciseOf(id, language)` and `localize(code, language, texts)`: a lesson, its answers and its exercise in a language.
 - `programIn(code, lesson, from, to)`: a program in another language, a lesson's own program as the lesson is given in it.

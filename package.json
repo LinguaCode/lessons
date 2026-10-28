@@ -1,6 +1,6 @@
 {
   "name": "linguacode-lessons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The lessons of LinguaCode: CMIL programs from a first print to functions, with their exercises, in every language of CMIL",
   "type": "module",
   "main": "dist/index.js",

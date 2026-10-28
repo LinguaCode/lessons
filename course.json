@@ -3,68 +3,81 @@
     {
       "id": "print",
       "title": "Printing",
+      "icon": "print",
       "lessons": ["hello", "comments", "numbersAndTexts", "severalValues"]
     },
     {
       "id": "variables",
       "title": "Variables",
+      "icon": "box",
       "lessons": ["variables", "valuesInText", "changeVariable", "arithmetic"]
     },
     {
       "id": "input",
       "title": "Asking questions",
+      "icon": "keyboard",
       "lessons": ["askName", "askAge", "calculator"]
     },
     {
       "id": "conditions",
       "title": "Conditions",
+      "icon": "code-branch",
       "lessons": ["ifElse", "elseIf", "andOrNot", "evenOdd"]
     },
     {
       "id": "while",
       "title": "Loops with {while}",
       "short": "{while}",
+      "icon": "rotate",
       "lessons": ["countdown", "whileGuess", "doWhile"]
     },
     {
       "id": "repeat",
-      "title": "{repeat} … {times}",
+      "title": "{repeat} \u2026 {times}",
+      "icon": "repeat",
       "lessons": ["repeat", "repeatStars"]
     },
     {
       "id": "for",
       "title": "Loops with {for}",
       "short": "{for}",
+      "icon": "list-ol",
       "lessons": ["forCount", "forStep", "timesTable", "forIn"]
     },
     {
       "id": "breakContinue",
       "title": "{break} and {continue}",
+      "icon": "forward-step",
       "lessons": ["break", "continue"]
     },
     {
       "id": "lists",
       "title": "Lists",
+      "icon": "list",
       "lessons": ["list", "addInto", "inList", "removeOutOf", "scores"]
     },
     {
       "id": "texts",
       "title": "Texts",
+      "icon": "font",
       "lessons": ["letters", "findWord", "splitJoin", "textNumbers"]
     },
     {
       "id": "math",
       "title": "Math",
+      "icon": "calculator",
       "lessons": ["mathFunctions", "circle", "dice"]
     },
     {
       "id": "functions",
       "title": "Functions",
+      "icon": "cube",
       "lessons": ["function", "return", "functionList", "recursion"]
     },
     {
       "id": "mixed",
       "title": "Everything together",
+      "icon": "layer-group",
       "lessons": ["guessNumber", "shoppingList", "gradeBook", "wordCounter", "primes"]
     }
   ],
@@ -72,6 +85,7 @@
     {
       "id": "loops",
       "title": "Loops",
+      "icon": "arrows-spin",
       "topics": ["while", "repeat", "for", "breakContinue"]
     }
   ]

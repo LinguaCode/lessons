@@ -5,11 +5,20 @@
  */
 import {check, segmentsOf, translate} from 'cmil';
 
-import {EXERCISES, ENGLISH, GROUPS, LESSON_IDS, LESSONS, SHORT_TOPICS, TOPICS} from './course.generated.ts';
+import {
+  EXERCISES,
+  ENGLISH,
+  GROUPS,
+  LESSON_IDS,
+  LESSONS,
+  SHORT_TOPICS,
+  TOPIC_ICON_NAMES,
+  TOPICS
+} from './course.generated.ts';
 import {partsOf} from './parts.ts';
 import type {Exercise, Group, Lesson, LessonId, LessonTexts, Topic} from './types.ts';
 
-export {EXERCISES, GROUPS, LESSON_IDS, LESSONS, SHORT_TOPICS, TOPICS, partsOf};
+export {EXERCISES, GROUPS, LESSON_IDS, LESSONS, SHORT_TOPICS, TOPIC_ICON_NAMES, TOPICS, partsOf};
 export {checkProgram, runWith, seeded} from './check.ts';
 export type {CheckResult, Run} from './check.ts';
 export type {Exercise, Group, Lesson, LessonId, LessonTexts, Topic};

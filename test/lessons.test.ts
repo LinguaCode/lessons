@@ -5,9 +5,11 @@ import {describe, expect, it} from 'vitest';
 import {
   EXERCISES,
   GROUPS,
+  HOLDERS,
   LESSON_LANGUAGES,
   LESSONS,
   TOPICS,
+  TOPIC_ICON_NAMES,
   checkProgram,
   exerciseOf,
   lessonCode,
@@ -87,6 +89,11 @@ describe('lessons', () => {
         topic
       ).toBe(true)
     );
+  });
+
+  it('every topic and group has the icon of its subject, a name of Font Awesome', () => {
+    expect(Object.keys(TOPIC_ICON_NAMES)).toEqual(HOLDERS);
+    Object.values(TOPIC_ICON_NAMES).forEach(name => expect(name).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/));
   });
 
   it('every language of CMIL has its lessons', () => {

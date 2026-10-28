@@ -7,9 +7,10 @@ import path from 'node:path';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const OUTPUT = path.join(ROOT, 'src', 'course.generated.ts');
 
+//a topic and a group each have the icon of their subject, by its name in Font Awesome's solid style, like list-ol
 type Course = {
-  topics: {id: string; title: string; short?: string; lessons: string[]}[];
-  groups: {id: string; title: string; topics: string[]}[];
+  topics: {id: string; title: string; short?: string; icon: string; lessons: string[]}[];
+  groups: {id: string; title: string; icon: string; topics: string[]}[];
 };
 type Meta = {
   title: string;
@@ -24,6 +25,7 @@ const problem = (text: string) => problems.push(text);
 const isTexts = (value: unknown): value is string[] =>
   Array.isArray(value) && value.every(item => typeof item === 'string');
 const ID = /^[a-z][A-Za-z0-9]*$/;
+const ICON = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 const course = JSON.parse(fs.readFileSync(path.join(ROOT, 'course.json'), 'utf8')) as Course;
 const topics = course.topics.map(({id}) => id);
@@ -40,6 +42,9 @@ for (const [kind, list] of [
 for (const {id, title, lessons} of course.topics) {
   if (typeof title !== 'string' || !title.trim()) problem(`course.json: the topic ${id} has no title`);
   if (!lessons.length) problem(`course.json: the topic ${id} has no lessons`);
+}
+for (const {id, icon} of [...course.topics, ...course.groups]) {
+  if (typeof icon !== 'string' || !ICON.test(icon)) problem(`course.json: ${id} has no icon named like list-ol`);
 }
 //a group holds topics that follow each other
 for (const group of course.groups) {
@@ -112,6 +117,11 @@ const lines = [
   )};`,
   '',
   `export const LESSON_IDS = ${json(ids)} as const;`,
+  '',
+  '//the icon of each topic and group, by its name in the solid style of Font Awesome',
+  `export const TOPIC_ICON_NAMES: Readonly<Record<(typeof TOPICS)[number] | keyof typeof GROUPS, string>> = ${json(
+    Object.fromEntries([...course.groups, ...course.topics].map(({id, icon}) => [id, icon]))
+  )};`,
   '',
   'export const LESSONS: readonly Lesson[] = [',
   ...lessons.map(
