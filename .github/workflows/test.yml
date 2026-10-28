@@ -1,0 +1,62 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # ESLint, Prettier and TypeScript
+      - run: npm run lint
+      - run: npm run typecheck
+
+  # the tests, with every compiler and interpreter the lessons converted are built and run with
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      # Free Pascal, Lua, gfortran, Tcl and GnuCOBOL for the tests of the lessons converted, and ncurses, which
+      # FreeBASIC links its programs with
+      - run: sudo apt-get update && sudo apt-get install -y fp-compiler lua5.4 gfortran tcl gnucobol3 nasm libncurses-dev
+      # FreeBASIC for the tests of the lessons converted: its build for Ubuntu 22.04, from SourceForge, checked by
+      # the SHA-1 its release on GitHub gives, and installed from the folder it is unpacked in
+      - run: |
+          cd "$RUNNER_TEMP"
+          curl -sSfL -o freebasic.tar.xz https://downloads.sourceforge.net/project/fbc/FreeBASIC-1.10.1/Binaries-Linux/FreeBASIC-1.10.1-ubuntu-22.04-x86_64.tar.xz
+          echo "3922c78a427c50bd637462b64b661a44569cb7d9  freebasic.tar.xz" | sha1sum -c
+          tar -xJf freebasic.tar.xz
+          cd FreeBASIC-1.10.1-ubuntu-22.04-x86_64 && sudo ./install.sh -i
+      # Go for the tests of the lessons converted, with gofmt, which checks their layout
+      - uses: actions/setup-go@v7
+        with:
+          go-version: stable
+          cache: false
+      # Java 25 for the tests of the lessons converted, which build and run the programs in Java, and in Kotlin with
+      # the kotlinc of the runner
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 25
+      # installing cmil from GitHub builds it through its prepare script
+      - run: npm ci
+      - run: npm test
+      # the package as a page or an app installs it, built through prepare
+      - name: Load the built package
+        run: >-
+          node --input-type=module -e "import {LESSONS, lessonCode, loadLessonTexts} from 'linguacode-lessons';
+          await loadLessonTexts('hy-AM'); console.log(lessonCode(LESSONS[0], 'hy-AM'));"
