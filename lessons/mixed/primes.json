@@ -1,0 +1,7 @@
+{
+  "title": "Prime numbers",
+  "description": "A loop inside a loop, {break} and a list.",
+  "exercise": {
+    "task": "At the end, also print the biggest prime number: only the number, on its own line."
+  }
+}

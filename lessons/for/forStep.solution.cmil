@@ -1,0 +1,6 @@
+print("Even numbers:")
+for number from 2 to 20 step 2
+    print(number)
+print("Counting down:")
+for number from 5 to 1 step -1
+    print(number)

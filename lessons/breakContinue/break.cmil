@@ -1,0 +1,6 @@
+print("Looking for the first number whose square is more than 50…")
+for number from 1 to 100
+    if number * number > 50
+        print("Found it: {number}")
+        break
+    print("{number} is too small")

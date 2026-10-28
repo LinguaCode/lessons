@@ -1,0 +1,6 @@
+print("2 to the power of 10: " + power(2, 10))
+print("The square root of 144: " + square_root(144))
+print("Pi: " + pi)
+print("Pi, rounded: " + round(pi, 2))
+print("7 below zero, without its sign: " + absolute_value(-7))
+print(power(3, 4))

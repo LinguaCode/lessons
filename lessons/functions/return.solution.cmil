@@ -1,0 +1,6 @@
+function area(width, depth)
+    return width * depth
+
+print("A room of 3 by 4 meters: {area(3, 4)} square meters")
+print("A garden of 5 by 8 meters: {area(5, 8)} square meters")
+print(area(6, 6))

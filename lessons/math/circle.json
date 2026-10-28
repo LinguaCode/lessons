@@ -1,0 +1,9 @@
+{
+  "title": "A circle",
+  "description": "{pi} and {sqr} give the area of a circle.",
+  "inputs": ["3"],
+  "exercise": {
+    "task": "Round the area and the perimeter to one decimal place.",
+    "answers": [["3"], ["10"]]
+  }
+}

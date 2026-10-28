@@ -1,0 +1,7 @@
+{
+  "title": "Changing a variable",
+  "description": "A variable can get a new value, made from its old one.",
+  "exercise": {
+    "task": "Make the gift 80 instead of 50."
+  }
+}

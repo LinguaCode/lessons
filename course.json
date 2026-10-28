@@ -1,0 +1,78 @@
+{
+  "topics": [
+    {
+      "id": "print",
+      "title": "Printing",
+      "lessons": ["hello", "comments", "numbersAndTexts", "severalValues"]
+    },
+    {
+      "id": "variables",
+      "title": "Variables",
+      "lessons": ["variables", "valuesInText", "changeVariable", "arithmetic"]
+    },
+    {
+      "id": "input",
+      "title": "Asking questions",
+      "lessons": ["askName", "askAge", "calculator"]
+    },
+    {
+      "id": "conditions",
+      "title": "Conditions",
+      "lessons": ["ifElse", "elseIf", "andOrNot", "evenOdd"]
+    },
+    {
+      "id": "while",
+      "title": "Loops with {while}",
+      "short": "{while}",
+      "lessons": ["countdown", "whileGuess", "doWhile"]
+    },
+    {
+      "id": "repeat",
+      "title": "{repeat} … {times}",
+      "lessons": ["repeat", "repeatStars"]
+    },
+    {
+      "id": "for",
+      "title": "Loops with {for}",
+      "short": "{for}",
+      "lessons": ["forCount", "forStep", "timesTable", "forIn"]
+    },
+    {
+      "id": "breakContinue",
+      "title": "{break} and {continue}",
+      "lessons": ["break", "continue"]
+    },
+    {
+      "id": "lists",
+      "title": "Lists",
+      "lessons": ["list", "addInto", "inList", "removeOutOf", "scores"]
+    },
+    {
+      "id": "texts",
+      "title": "Texts",
+      "lessons": ["letters", "findWord", "splitJoin", "textNumbers"]
+    },
+    {
+      "id": "math",
+      "title": "Math",
+      "lessons": ["mathFunctions", "circle", "dice"]
+    },
+    {
+      "id": "functions",
+      "title": "Functions",
+      "lessons": ["function", "return", "functionList", "recursion"]
+    },
+    {
+      "id": "mixed",
+      "title": "Everything together",
+      "lessons": ["guessNumber", "shoppingList", "gradeBook", "wordCounter", "primes"]
+    }
+  ],
+  "groups": [
+    {
+      "id": "loops",
+      "title": "Loops",
+      "topics": ["while", "repeat", "for", "breakContinue"]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+shopping = ["bread", "milk", "eggs", "cheese"]
+print("To buy: " + join(shopping, ", "))
+remove(shopping, "milk")
+print("The milk is bought.")
+remove(shopping, "eggs")
+print("The eggs are bought.")
+remove(shopping, "cheese")
+print("Still to buy: " + join(shopping, ", "))

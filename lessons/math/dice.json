@@ -1,0 +1,8 @@
+{
+  "title": "Dice",
+  "description": "{random} gives a different number each time.",
+  "exercise": {
+    "task": "Roll a third die, and add it to the total.",
+    "answers": [[], [], [], []]
+  }
+}

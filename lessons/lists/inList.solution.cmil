@@ -1,0 +1,9 @@
+pets = ["cat", "dog", "fish"]
+print("I have three pets. Guess one of them!")
+print("Which animal?")
+animal = input()
+if animal in pets
+    print("Yes, I have one!")
+else
+    print("No, I do not have one.")
+    print("My pets: " + join(pets, ", "))

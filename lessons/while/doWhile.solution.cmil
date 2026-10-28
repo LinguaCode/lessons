@@ -1,0 +1,12 @@
+print("Type numbers to add them up. Type 0 to stop.")
+total = 0
+best = 0
+do
+    print("A number?")
+    number = input()
+    total = total + number
+    if number > best
+        best = number
+while number != 0
+print("Total: " + total)
+print(best)

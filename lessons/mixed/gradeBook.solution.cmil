@@ -1,0 +1,21 @@
+function grade(score)
+    if score >= 90
+        return "excellent"
+    else if score >= 80
+        return "good"
+    return "keep trying"
+
+scores = []
+print("Type the scores of a test, from 0 to 100. Type -1 to finish.")
+while true
+    print("A score?")
+    score = input()
+    if score == -1
+        break
+    add(scores, score)
+total = 0
+for score in scores
+    print("{score} - {grade(score)}")
+    total = total + score
+if length_of(scores) > 0
+    print("Average: {round(total / length_of(scores), 1)}")

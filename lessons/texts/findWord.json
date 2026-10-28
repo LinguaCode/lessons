@@ -1,0 +1,9 @@
+{
+  "title": "Find a word",
+  "description": "{in} also checks whether a text has another text in it.",
+  "inputs": ["fox"],
+  "exercise": {
+    "task": "After the sentence, also print its length, spaces included: only the number, on its own line.",
+    "answers": [["fox"], ["cat"]]
+  }
+}

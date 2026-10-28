@@ -1,0 +1,7 @@
+{
+  "title": "Comments",
+  "description": "# starts a comment: a note for the people who read the program, which the program skips.",
+  "exercise": {
+    "task": "Turn the last line into a comment, so that the program only says hello."
+  }
+}

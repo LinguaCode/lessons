@@ -1,0 +1,9 @@
+{
+  "title": "Numbers as answers",
+  "description": "An answer that is a number can be counted with.",
+  "inputs": ["12"],
+  "exercise": {
+    "task": "At the end, print the age of a year ago: only the number, on its own line.",
+    "answers": [["12"], ["40"]]
+  }
+}

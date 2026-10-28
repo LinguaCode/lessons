@@ -1,0 +1,4 @@
+apples = 3
+pears = 5
+print("I have {apples} apples and {pears} pears.")
+print("Together they are {apples + pears} fruits.")

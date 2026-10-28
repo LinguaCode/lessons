@@ -1,0 +1,4 @@
+# This program says hello and goodbye.
+print("Hello!")
+# The next line says goodbye.
+# print("Goodbye!")

@@ -1,0 +1,8 @@
+print("The numbers from 1 to 10 that 3 does not divide:")
+count = 0
+for number from 1 to 10
+    if number % 3 == 0
+        continue
+    print(number)
+    count = count + 1
+print(count)

@@ -1,0 +1,7 @@
+{
+  "title": "Continue",
+  "description": "{continue} skips to the next pass of a loop.",
+  "exercise": {
+    "task": "At the end, also print how many numbers were printed: only the number, on its own line."
+  }
+}

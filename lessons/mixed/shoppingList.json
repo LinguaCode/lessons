@@ -1,0 +1,9 @@
+{
+  "title": "Shopping list",
+  "description": "A menu that adds to a list and removes from it.",
+  "inputs": ["1", "bread", "1", "milk", "2", "tea", "2", "milk", "3", "0"],
+  "exercise": {
+    "task": "When the list is shown, also print how many items it has: only the number, on its own line.",
+    "answers": [["1", "bread", "1", "milk", "2", "tea", "2", "milk", "3", "0"]]
+  }
+}

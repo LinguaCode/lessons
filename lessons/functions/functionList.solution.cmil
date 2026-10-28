@@ -1,0 +1,9 @@
+function average(numbers)
+    total = 0
+    for number in numbers
+        total = total + number
+    return total / length_of(numbers)
+
+print("The average of 2, 4 and 9: " + average([2, 4, 9]))
+print("The average of my scores: " + average([7, 9, 8, 10]))
+print(average([1, 2, 3]))

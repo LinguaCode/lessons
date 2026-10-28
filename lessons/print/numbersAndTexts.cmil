@@ -1,0 +1,4 @@
+print(2 + 3)
+print("2 + 3")
+print(10 * 4 - 2)
+print("A number is counted, and a text is printed as it is.")

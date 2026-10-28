@@ -1,0 +1,7 @@
+{
+  "title": "Split and join",
+  "description": "{split} cuts a text into a list, and {join} glues a list into a text.",
+  "exercise": {
+    "task": "Join the letters with a dot instead of a dash."
+  }
+}

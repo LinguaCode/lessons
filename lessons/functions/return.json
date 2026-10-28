@@ -1,0 +1,7 @@
+{
+  "title": "Return",
+  "description": "{return} gives a value back from a function.",
+  "exercise": {
+    "task": "At the end, also print the area of 6 by 6 meters: only the number."
+  }
+}

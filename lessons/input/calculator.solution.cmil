@@ -1,0 +1,6 @@
+print("I can add two numbers.")
+print("The first number?")
+first = input()
+print("The second number?")
+second = input()
+print("{first} × {second} = {first * second}")

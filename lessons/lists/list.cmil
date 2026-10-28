@@ -1,0 +1,5 @@
+fruits = ["apple", "pear", "plum"]
+print(join(fruits, ", "))
+print("The first fruit: " + fruits[1])
+print("The last fruit: " + fruits[length_of(fruits)])
+print("Fruits: " + length_of(fruits))

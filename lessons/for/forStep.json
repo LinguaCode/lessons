@@ -1,0 +1,7 @@
+{
+  "title": "Steps",
+  "description": "{step} counts by 2, or down with -1.",
+  "exercise": {
+    "task": "Make the even numbers go up to 20, and count down from 5."
+  }
+}

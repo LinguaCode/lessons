@@ -1,0 +1,12 @@
+{
+  "title": "A calculator",
+  "description": "Two questions, and their answers added up.",
+  "inputs": ["7", "5"],
+  "exercise": {
+    "task": "Multiply the numbers instead of adding them: for 7 and 5, the last line is 7 × 5 = 35.",
+    "answers": [
+      ["7", "5"],
+      ["3", "4"]
+    ]
+  }
+}

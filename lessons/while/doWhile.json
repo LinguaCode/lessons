@@ -1,0 +1,12 @@
+{
+  "title": "{do} … {while}",
+  "description": "{do} runs its block first, and checks the condition after it.",
+  "inputs": ["5", "10", "0"],
+  "exercise": {
+    "task": "After the total, also print the biggest number typed: only the number, on its own line.",
+    "answers": [
+      ["5", "10", "0"],
+      ["3", "0"]
+    ]
+  }
+}

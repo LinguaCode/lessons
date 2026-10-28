@@ -1,0 +1,2 @@
+repeat 3 times
+    print("Hip, hip, hooray!")

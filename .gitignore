@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coverage/
+# written by npm run generate from course.json and lessons/
+src/course.generated.ts
+# written by npm run lesson-programs
+lesson-programs.json

@@ -1,0 +1,9 @@
+{
+  "title": "{if} and {else}",
+  "description": "{if} runs its block when its condition is true, and {else} when it is false.",
+  "inputs": ["12"],
+  "exercise": {
+    "task": "In some countries you are an adult from 21: change the program for them.",
+    "answers": [["12"], ["19"], ["21"], ["30"]]
+  }
+}

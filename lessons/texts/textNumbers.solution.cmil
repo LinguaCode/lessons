@@ -1,0 +1,7 @@
+numbers = split("4 8 15 16 23 42")
+total = 0
+for part in numbers
+    total = total + to_number(part)
+print("The numbers: " + join(numbers, " + "))
+print("Their sum: " + total)
+print("As texts, 4 and 2 make " + (to_text(4) + to_text(2)))

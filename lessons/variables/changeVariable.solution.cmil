@@ -1,0 +1,6 @@
+money = 100
+print("Money: " + money)
+money = money + 80
+print("After a gift: " + money)
+money = money - 30
+print("After shopping: " + money)

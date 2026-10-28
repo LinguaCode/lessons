@@ -1,0 +1,9 @@
+{
+  "title": "Word counter",
+  "description": "{split}, {length}, {for} and {join} on your own words.",
+  "inputs": ["the cat sat on the mat"],
+  "exercise": {
+    "task": "Print the words in reverse order, in capital letters.",
+    "answers": [["the cat sat on the mat"]]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Math functions",
+  "description": "{pow}, {sqrt}, {round}, {abs} and {pi}.",
+  "exercise": {
+    "task": "At the end, also print 3 to the power of 4: only the number."
+  }
+}

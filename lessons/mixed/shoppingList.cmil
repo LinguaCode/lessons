@@ -1,0 +1,21 @@
+shopping = []
+print("Let us make a shopping list.")
+do
+    print("1: add, 2: remove, 3: show the list, 0: finish")
+    print("Your choice?")
+    choice = input()
+    if choice == 1
+        print("What should I add?")
+        item = input()
+        add(shopping, item)
+    else if choice == 2
+        print("What should I remove?")
+        item = input()
+        if item in shopping
+            remove(shopping, item)
+        else
+            print("That is not on the list.")
+    else if choice == 3
+        print(join(shopping, ", "))
+while choice != 0
+print("Items on your list: " + length_of(shopping))

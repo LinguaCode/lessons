@@ -1,0 +1,5 @@
+colors = split("red green blue")
+print("Colors: " + length_of(colors))
+print(join(colors, " + "))
+letters = split("hello", "")
+print(join(letters, "."))

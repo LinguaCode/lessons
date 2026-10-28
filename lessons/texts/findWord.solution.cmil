@@ -1,0 +1,9 @@
+sentence = "The quick brown fox jumps over the lazy dog"
+print(sentence)
+print(length_of(sentence))
+print("Which word should I look for?")
+word = input()
+if word in sentence
+    print("Found it!")
+else
+    print("It is not there.")

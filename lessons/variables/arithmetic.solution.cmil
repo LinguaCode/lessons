@@ -1,0 +1,7 @@
+cookies = 23
+children = 4
+left = cookies % children
+each = (cookies - left) / children
+print("Each child gets: " + each)
+print("Cookies left: " + left)
+print("Twice as many cookies: {cookies * 2}")

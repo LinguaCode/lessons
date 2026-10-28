@@ -1,0 +1,13 @@
+print("The prime numbers up to 50:")
+primes = []
+for number from 2 to 50
+    prime = true
+    for divisor from 2 to square_root(number)
+        if number % divisor == 0
+            prime = false
+            break
+    if prime
+        add(primes, number)
+print(join(primes, ", "))
+print("Prime numbers: " + length_of(primes))
+print(primes[length_of(primes)])

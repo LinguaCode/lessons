@@ -1,0 +1,6 @@
+print("The radius of the circle, in centimeters?")
+radius = input()
+area = pi * square(radius)
+perimeter = 2 * pi * radius
+print("Area: " + round(area, 1))
+print("Perimeter: " + round(perimeter, 1))

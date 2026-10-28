@@ -1,0 +1,9 @@
+{
+  "title": "Is it in the list?",
+  "description": "{in} checks whether a list has a value.",
+  "inputs": ["dog"],
+  "exercise": {
+    "task": "Print the list of pets only when the guess is wrong.",
+    "answers": [["dog"], ["horse"]]
+  }
+}

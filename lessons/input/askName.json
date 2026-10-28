@@ -1,0 +1,9 @@
+{
+  "title": "What is your name?",
+  "description": "{print} asks the question, {input} waits for the answer, and = keeps it in a variable.",
+  "inputs": ["Ani"],
+  "exercise": {
+    "task": "After the greeting, print the name once more, on its own line.",
+    "answers": [["Ani"], ["Sam"]]
+  }
+}

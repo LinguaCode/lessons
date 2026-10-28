@@ -1,0 +1,7 @@
+{
+  "title": "Scores",
+  "description": "An item is changed, and a loop finds the total and the best.",
+  "exercise": {
+    "task": "Make the second try give 10 instead of 8."
+  }
+}

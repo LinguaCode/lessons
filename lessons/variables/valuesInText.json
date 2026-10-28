@@ -1,0 +1,7 @@
+{
+  "title": "Values in a text",
+  "description": "A name or a sum in braces puts its value into a text: shorter than joining with +.",
+  "exercise": {
+    "task": "There are 7 pears, not 5: change only the second line."
+  }
+}

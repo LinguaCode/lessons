@@ -1,0 +1,7 @@
+{
+  "title": "Numbers in texts",
+  "description": "{number} reads the number in a text, and {text} writes a value as a text.",
+  "exercise": {
+    "task": "Join the numbers with \" + \" instead of \", \"."
+  }
+}

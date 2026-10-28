@@ -1,0 +1,13 @@
+scores = [7, 9, 4, 10]
+print("Scores: " + join(scores, ", "))
+scores[3] = 8
+print("After a second try: " + join(scores, ", "))
+total = 0
+best = scores[1]
+for score in scores
+    total = total + score
+    if score > best
+        best = score
+print("Total: " + total)
+print("Best: " + best)
+print("Average: {total / length_of(scores)}")

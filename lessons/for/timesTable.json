@@ -1,0 +1,9 @@
+{
+  "title": "Times table",
+  "description": "{for}, {input} and arithmetic together.",
+  "inputs": ["7"],
+  "exercise": {
+    "task": "Make the table go up to 12.",
+    "answers": [["7"], ["3"]]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Even or odd",
+  "description": "% gives the remainder of a division, and {if} decides.",
+  "inputs": ["7"],
+  "exercise": {
+    "task": "When the number is even, also print half of it, on its own line.",
+    "answers": [["7"], ["10"]]
+  }
+}

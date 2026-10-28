@@ -1,0 +1,12 @@
+{
+  "title": "Grade book",
+  "description": "A function, a list, {while} and {break} together.",
+  "inputs": ["95", "72", "40", "-1"],
+  "exercise": {
+    "task": "Make a score good from 80 instead of 70.",
+    "answers": [
+      ["95", "72", "40", "-1"],
+      ["85", "75", "-1"]
+    ]
+  }
+}

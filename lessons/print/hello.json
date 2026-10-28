@@ -1,0 +1,7 @@
+{
+  "title": "Hello, world",
+  "description": "{print} shows a text on the screen.",
+  "exercise": {
+    "task": "Make the program print its second line twice."
+  }
+}

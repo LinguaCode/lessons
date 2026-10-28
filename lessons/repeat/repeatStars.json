@@ -1,0 +1,9 @@
+{
+  "title": "A line of stars",
+  "description": "{repeat} with a variable that grows each time.",
+  "inputs": ["4"],
+  "exercise": {
+    "task": "Print the stars only once, at the end, all on one line.",
+    "answers": [["4"], ["2"]]
+  }
+}

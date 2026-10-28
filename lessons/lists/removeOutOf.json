@@ -1,0 +1,7 @@
+{
+  "title": "Removing from a list",
+  "description": "{remove} takes a value out of a list.",
+  "exercise": {
+    "task": "Take the cheese out of the list too, before the last line."
+  }
+}

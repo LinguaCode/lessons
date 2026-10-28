@@ -1,0 +1,7 @@
+{
+  "title": "Each item",
+  "description": "{for} … {in} goes through the items of a list, or the letters of a text.",
+  "exercise": {
+    "task": "In the second loop, print each letter twice, side by side on the same line."
+  }
+}

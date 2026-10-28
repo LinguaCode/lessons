@@ -1,0 +1,7 @@
+{
+  "title": "Countdown",
+  "description": "{while} repeats its block as long as its condition is true.",
+  "exercise": {
+    "task": "Count down from 10 instead of 5."
+  }
+}

@@ -1,0 +1,5 @@
+print("How old are you?")
+age = input()
+print("Next year you will be {age + 1} years old.")
+print("In ten years you will be {age + 10} years old.")
+print(age - 1)

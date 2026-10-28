@@ -1,0 +1,7 @@
+{
+  "title": "Variables",
+  "description": "A variable keeps a value under a name.",
+  "exercise": {
+    "task": "Change only the first line, so that there are 10 apples."
+  }
+}

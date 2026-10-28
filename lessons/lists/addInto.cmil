@@ -1,0 +1,7 @@
+basket = []
+add(basket, "apple")
+add(basket, "bread")
+add(basket, "milk")
+print("In the basket: " + length_of(basket))
+for item in basket
+    print("- " + item)

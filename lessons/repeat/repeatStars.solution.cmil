@@ -1,0 +1,6 @@
+print("How many stars?")
+stars = input()
+line = ""
+repeat stars times
+    line = line + "⭐"
+print(line)

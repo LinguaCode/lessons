@@ -1,0 +1,7 @@
+{
+  "title": "A function with a list",
+  "description": "A function can take a list and go through it.",
+  "exercise": {
+    "task": "At the end, also print the average of 1, 2 and 3: only the number."
+  }
+}

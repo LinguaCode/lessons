@@ -1,0 +1,7 @@
+{
+  "title": "Counting",
+  "description": "{for} … {from} … {to} gives a variable the numbers from one to another.",
+  "exercise": {
+    "task": "Count by twos: 1, 3 and 5."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Break",
+  "description": "{break} leaves a loop early.",
+  "exercise": {
+    "task": "Don’t print the numbers that are too small: print only the one that is found."
+  }
+}

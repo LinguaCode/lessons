@@ -1,0 +1,4 @@
+print("Apples: " + 4)
+print("Pears: " + 5)
+print("Fruits: " + (4 + 5))
+print("Fruits: " + (4 + 5))

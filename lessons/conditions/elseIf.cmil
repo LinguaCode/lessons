@@ -1,0 +1,8 @@
+print("How warm is it outside, in degrees?")
+temperature = input()
+if temperature > 25
+    print("It is hot. Take some water.")
+else if temperature > 10
+    print("It is warm. Take a jacket.")
+else
+    print("It is cold. Take a coat.")

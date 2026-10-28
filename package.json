@@ -1,0 +1,55 @@
+{
+  "name": "linguacode-lessons",
+  "version": "0.1.0",
+  "description": "The lessons of LinguaCode: CMIL programs from a first print to functions, with their exercises, in every language of CMIL",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "course.json",
+    "lessons"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate.ts",
+    "build": "npm run generate && tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "typecheck": "npm run generate && tsc",
+    "test": "npm run generate && vitest run",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "lesson-programs": "npm run generate && node scripts/lesson-programs.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinguaCode/lessons.git"
+  },
+  "engines": {
+    "node": ">= 24"
+  },
+  "author": "Arman Yeghiazaryan <otanim617@gmail.com> (https://otanim.com)",
+  "license": "GPL-3.0-only",
+  "bugs": "https://github.com/LinguaCode/lessons/issues",
+  "peerDependencies": {
+    "cmil": ">=0.22.0-alpha.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "cmil": "github:LinguaCode/cmil#v0.22.0-alpha.0",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  }
+}

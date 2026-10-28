@@ -1,0 +1,7 @@
+function greet(name)
+    print("Hello, {name}!")
+
+greet("Ani")
+greet("Sam")
+print("The function said hello twice.")
+greet("Ani")

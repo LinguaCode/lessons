@@ -1,0 +1,9 @@
+{
+  "title": "Letters",
+  "description": "{length}, the letters of a text, {upper} and {lower}.",
+  "inputs": ["Ani"],
+  "exercise": {
+    "task": "At the end, also print the last letter of the name, on its own line.",
+    "answers": [["Ani"], ["Sam"]]
+  }
+}

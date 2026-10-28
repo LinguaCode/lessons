@@ -1,0 +1,7 @@
+{
+  "title": "Adding to a list",
+  "description": "{add} puts a value at the end of a list.",
+  "exercise": {
+    "task": "Put the milk in the basket first."
+  }
+}

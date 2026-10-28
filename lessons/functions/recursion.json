@@ -1,0 +1,7 @@
+{
+  "title": "Recursion",
+  "description": "A function can call itself.",
+  "exercise": {
+    "task": "Go up to 10 instead of 6."
+  }
+}

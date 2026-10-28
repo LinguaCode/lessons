@@ -1,0 +1,13 @@
+secret = random(1, 20)
+tries = 0
+print("I am thinking of a number from 1 to 20.")
+do
+    print("Your guess?")
+    guess = input()
+    tries = tries + 1
+    if guess < secret
+        print("Higher! ⬆️")
+    else if guess > secret
+        print("Lower! ⬇️")
+while guess != secret
+print("You got it in {tries} tries! 🎉")

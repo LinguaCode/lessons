@@ -1,0 +1,6 @@
+print("What is your name?")
+name = input()
+print("Letters in your name: " + length_of(name))
+print("The first letter: " + name[1])
+print("In capital letters: " + uppercase(name))
+print("In small letters: " + lowercase(name))

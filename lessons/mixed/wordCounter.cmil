@@ -1,0 +1,13 @@
+print("Write a few words, with spaces between them:")
+sentence = input()
+words = split(lowercase(sentence))
+print("Words: " + length_of(words))
+longest = ""
+for word in words
+    if length_of(word) > length_of(longest)
+        longest = word
+print("The longest word: " + longest)
+backwards = []
+for place from length_of(words) to 1 step -1
+    add(backwards, words[place])
+print("Backwards: " + join(backwards, " "))

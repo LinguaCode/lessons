@@ -1,0 +1,7 @@
+{
+  "title": "Joining values",
+  "description": "+ joins values into one text, from left to right. End the text with a space, and put a sum in parentheses to count it first.",
+  "exercise": {
+    "task": "There are 4 apples, not 3: change the program so that every line is right."
+  }
+}

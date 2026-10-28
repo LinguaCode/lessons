@@ -1,0 +1,7 @@
+print("Rolling two dice… 🎲🎲")
+first = random(1, 6)
+second = random(1, 6)
+print("You rolled {first} and {second}")
+if first == second
+    print("A double!")
+print("Total: {first + second}")

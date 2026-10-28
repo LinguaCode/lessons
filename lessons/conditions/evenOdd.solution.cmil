@@ -1,0 +1,7 @@
+print("A whole number?")
+number = input()
+if number % 2 == 0
+    print("{number} is even.")
+    print(number / 2)
+else
+    print("{number} is odd.")

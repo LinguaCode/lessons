@@ -1,0 +1,7 @@
+{
+  "title": "Lists",
+  "description": "A list keeps several values in order; [1] is its first item, and {join} puts its items into one text.",
+  "exercise": {
+    "task": "At the end, also print the second fruit, alone on its own line."
+  }
+}

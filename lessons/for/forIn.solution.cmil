@@ -1,0 +1,4 @@
+for color in ["red", "green", "blue"]
+    print("A nice color: " + color)
+for letter in "hello"
+    print(letter + letter)

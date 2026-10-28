@@ -1,0 +1,7 @@
+{
+  "title": "Repeat",
+  "description": "{repeat} … {times} runs its block a number of times.",
+  "exercise": {
+    "task": "Repeat the cheer 5 times instead of 3."
+  }
+}

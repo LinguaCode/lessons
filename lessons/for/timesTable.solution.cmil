@@ -1,0 +1,4 @@
+print("Which times table?")
+table = input()
+for number from 1 to 12
+    print("{table} × {number} = {table * number}")

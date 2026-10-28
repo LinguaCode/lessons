@@ -1,0 +1,10 @@
+print("Guess my favorite number, from 1 to 10.")
+print("Your guess?")
+guess = input()
+tries = 1
+while guess != 7
+    print("No. Try again:")
+    guess = input()
+    tries = tries + 1
+print("Yes! It is 7.")
+print(tries)

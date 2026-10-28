@@ -1,0 +1,7 @@
+{
+  "title": "Functions",
+  "description": "A function is a block with a name, which runs when it is called.",
+  "exercise": {
+    "task": "At the end, greet the first person once more."
+  }
+}

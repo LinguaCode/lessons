@@ -1,0 +1,9 @@
+{
+  "title": "{else} {if}",
+  "description": "Several conditions, checked one after another.",
+  "inputs": ["18"],
+  "exercise": {
+    "task": "Make it hot only above 30 degrees, and cold up to 15.",
+    "answers": [["18"], ["28"], ["12"], ["35"]]
+  }
+}

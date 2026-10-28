@@ -1,0 +1,6 @@
+apples = 10
+pears = 5
+fruits = apples + pears
+print("Apples: " + apples)
+print("Pears: " + pears)
+print("Fruits: " + fruits)

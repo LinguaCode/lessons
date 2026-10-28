@@ -1,0 +1,14 @@
+{
+  "title": "{and}, {or}, {not}",
+  "description": "Conditions joined with {and} and {or}, and turned around with {not}.",
+  "inputs": ["9", "130"],
+  "exercise": {
+    "task": "The roller coaster now needs at least 130 centimeters.",
+    "answers": [
+      ["9", "125"],
+      ["9", "135"],
+      ["7", "140"],
+      ["75", "150"]
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Numbers and texts",
+  "description": "A number is counted, and a text in quotes is printed as it is.",
+  "exercise": {
+    "task": "At the end, print what 6 times 7 is."
+  }
+}
