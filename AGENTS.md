@@ -20,7 +20,7 @@ Verified on 2026-10-28. Update this section when a fact changes.
 - **Lesson programs:** `npm run lesson-programs` writes `lesson-programs.json` (gitignored), every lesson and solution in every language, for CMIL's `npm run snapshot -- --programs`.
 - **CI:** GitHub Actions. `.github/workflows/test.yml` runs the lint and type checks, and the tests with every compiler and interpreter the converted lessons are built and run with (Java 25, Free Pascal, Lua, FreeBASIC, gfortran, Tcl, NASM, GnuCOBOL, Go, and the runner's Kotlin, Swift, Rust, PHP and Ruby), then loads the package as an install builds it, on every push and pull request. The gh token has no `workflow` scope, so push a change of `.github/workflows/` over SSH: `git push git@github.com:LinguaCode/lessons.git master`.
 - **Lint and format:** ESLint and Prettier (`.prettierrc.json`, as CMIL's). `npm run lint` checks both, `npm run format` rewrites.
-- **Version:** `0.2.0`, released as a tag `v<version>` after its CI passes; `CHANGELOG.md` says what each changes. Branch: `master`.
+- **Version:** `0.3.0`, released as a tag `v<version>` after its CI passes; `CHANGELOG.md` says what each changes. Branch: `master`.
 
 ## Commands
 

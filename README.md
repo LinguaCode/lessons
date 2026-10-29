@@ -40,7 +40,7 @@ The tests check that every language has every text, with the commands and the co
 The package installs from GitHub, at a release tag, and takes the CMIL of the page or app that uses it, a peer dependency:
 
 ```
-npm install github:LinguaCode/cmil#v0.23.0-alpha.0 github:LinguaCode/lessons#v0.2.0
+npm install github:LinguaCode/cmil#v0.24.0-alpha.0 github:LinguaCode/lessons#v0.3.0
 ```
 
 ```js
