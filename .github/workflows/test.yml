@@ -60,3 +60,8 @@ jobs:
         run: >-
           node --input-type=module -e "import {LESSONS, lessonCode, loadLessonTexts} from 'linguacode-lessons';
           await loadLessonTexts('hy-AM'); console.log(lessonCode(LESSONS[0], 'hy-AM'));"
+      - name: Add a language from its built entry
+        run: >-
+          node --input-type=module -e "import {LESSONS, addLessonTexts, lessonCode} from 'linguacode-lessons';
+          import texts from 'linguacode-lessons/i18n/ja'; addLessonTexts('ja', texts);
+          console.log(lessonCode(LESSONS[0], 'ja'));"

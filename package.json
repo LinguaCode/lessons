@@ -9,6 +9,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./i18n/*": {
+      "types": "./dist/i18n/*.d.ts",
+      "default": "./dist/i18n/*.js"
     }
   },
   "sideEffects": false,
@@ -38,7 +42,7 @@
   "license": "GPL-3.0-only",
   "bugs": "https://github.com/LinguaCode/lessons/issues",
   "peerDependencies": {
-    "cmil": ">=0.22.0-alpha.0 || >=0.23.0-alpha.0"
+    "cmil": ">=0.22.0-alpha.0 || >=0.23.0-alpha.0 || >=0.24.0-alpha.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

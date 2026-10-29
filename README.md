@@ -40,7 +40,7 @@ The tests check that every language has every text, with the commands and the co
 The package installs from GitHub, at a release tag, and takes the CMIL of the page or app that uses it, a peer dependency:
 
 ```
-npm install github:LinguaCode/cmil#v0.22.0-alpha.0 github:LinguaCode/lessons#v0.1.0
+npm install github:LinguaCode/cmil#v0.23.0-alpha.0 github:LinguaCode/lessons#v0.2.0
 ```
 
 ```js
@@ -57,6 +57,7 @@ checkProgram(program, solution, 'hy-AM', answers); // {passed: true} or the firs
 - `TOPICS`, `GROUPS`, `SHORT_TOPICS`, `LESSON_IDS`, `LESSONS` and `EXERCISES`: the course, in English.
 - `TOPIC_ICON_NAMES`: the icon of each topic and group, a name of Font Awesome's solid style, which a page makes `fa-solid fa-<name>` or its own icon of that name.
 - `LESSON_LANGUAGES`, `loadLessonTexts(language)` and `lessonTextsOf(language)`: the texts of each language, loaded when it is chosen, each a module of its own, which a bundler makes a file of its own; English needs no loading.
+- `linguacode-lessons/i18n/<language>`, like `linguacode-lessons/i18n/hy-AM`: the texts of a language alone, its default export, data with no code, for an app that loads each language its own way, and `addLessonTexts(language, texts)`, which adds them, once it checks that they have every topic, group, lesson and exercise.
 - `lessonCode(lesson, language)`, `lessonInputs(lesson, language)`, `exerciseOf(id, language)` and `localize(code, language, texts)`: a lesson, its answers and its exercise in a language.
 - `programIn(code, lesson, from, to)`: a program in another language, a lesson's own program as the lesson is given in it.
 - `checkProgram(code, solution, language, answerSets)`, `runWith()` and `seeded()`: an exercise checked, the program and the solution run with the same answers and the same random numbers.

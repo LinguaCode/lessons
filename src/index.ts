@@ -146,12 +146,51 @@ const LESSON_TEXTS: Record<string, LessonTexts> = {en: ENGLISH};
 /** The languages the lessons are in, which are those of CMIL. */
 export const LESSON_LANGUAGES: readonly string[] = Object.freeze(['en', ...Object.keys(LOADERS)]);
 
+const isText = (value: unknown) => typeof value === 'string' && !!value.trim();
+const isTexts = (value: unknown) =>
+  typeof value === 'object' && value !== null && Object.values(value).every(text => typeof text === 'string');
+
+//what texts lack of the course: each topic, group, lesson and exercise has its text, and the names and texts of the
+//programs are texts
+const missingOf = (texts: LessonTexts): string[] => [
+  ...TOPICS.filter(topic => !isText(texts.topics?.[topic])).map(topic => `the topic ${topic}`),
+  ...(Object.keys(GROUPS) as Group[])
+    .filter(group => !isText(texts.groups?.[group]))
+    .map(group => `the group ${group}`),
+  ...LESSON_IDS.filter(id => {
+    const lesson = texts.lessons?.[id];
+    return !Array.isArray(lesson) || lesson.length !== 2 || !lesson.every(isText);
+  }).map(id => `the lesson ${id}`),
+  ...LESSON_IDS.filter(id => !isText(texts.exercises?.[id])).map(id => `the exercise of ${id}`),
+  ...(['names', 'texts'] as const).filter(key => !isTexts(texts[key])).map(key => `${key} of texts`)
+];
+
 /**
- * Loads the lessons of a language, before they are shown; English needs no loading.
+ * Adds the lessons of a language, like the default export of linguacode-lessons/i18n/<language>, which a page or an
+ * app loads its own way, like a part of its own; lessonTextsOf() then gives them. A language that isn't one of
+ * LESSON_LANGUAGES, English, which the lessons have already, and texts that lack a topic, a group, a lesson or an
+ * exercise of the course, throw an error.
+ *
+ * @example
+ * addLessonTexts('hy-AM', (await import('linguacode-lessons/i18n/hy-AM')).default);
+ */
+export const addLessonTexts = (language: string, texts: LessonTexts): void => {
+  if (language === 'en') throw new Error('The lessons have their English texts already');
+  if (!Object.hasOwn(LOADERS, language)) throw new Error(`Unknown language of the lessons: ${language}`);
+  const missing = missingOf(texts);
+  if (missing.length) {
+    const more = missing.length > 3 ? ` and ${missing.length - 3} more` : '';
+    throw new Error(`The lessons of ${language} have no text of ${missing.slice(0, 3).join(', ')}${more}`);
+  }
+  LESSON_TEXTS[language] = texts;
+};
+
+/**
+ * Loads the lessons of a language, before they are shown, as addLessonTexts() adds them; English needs no loading.
  */
 export const loadLessonTexts = async (language: string): Promise<void> => {
   const load = Object.hasOwn(LOADERS, language) ? LOADERS[language] : undefined;
-  if (load && !Object.hasOwn(LESSON_TEXTS, language)) LESSON_TEXTS[language] = (await load()).default;
+  if (load && !Object.hasOwn(LESSON_TEXTS, language)) addLessonTexts(language, (await load()).default);
 };
 
 //the lessons of a language that is loaded, else the English ones
