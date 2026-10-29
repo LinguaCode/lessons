@@ -58,7 +58,8 @@ jobs:
       # the package as a page or an app installs it, built through prepare
       - name: Load the built package
         run: >-
-          node --input-type=module -e "import {LESSONS, lessonCode, loadLessonTexts} from 'linguacode-lessons';
+          node --input-type=module -e "import {LESSONS, lessonCode} from 'linguacode-lessons';
+          import {loadLessonTexts} from 'linguacode-lessons/load';
           await loadLessonTexts('hy-AM'); console.log(lessonCode(LESSONS[0], 'hy-AM'));"
       - name: Add a language from its built entry
         run: >-

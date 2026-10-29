@@ -15,12 +15,12 @@ import {
   lessonCode,
   lessonInputs,
   lessonTextsOf,
-  loadLessonTexts,
   partsOf,
   runWith,
   seeded,
   translatablesOf
 } from '../src/index.ts';
+import {loadLessonTexts} from '../src/load.ts';
 
 //languages that aren't written in Latin letters, whose names have none
 const NOT_LATIN = ['ar', 'el', 'he', 'hy-AM', 'ja', 'ka', 'ko', 'ru', 'sr', 'th', 'uk', 'zh-CN'];

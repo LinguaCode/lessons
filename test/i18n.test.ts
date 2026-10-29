@@ -33,6 +33,30 @@ describe('the lessons of each language', () => {
     expect(exports['./i18n/*']).toEqual({types: './dist/i18n/*.d.ts', default: './dist/i18n/*.js'});
   });
 
+  it('leave out of the main entry every module of a language, which linguacode-lessons/load loads', () => {
+    //a bundler makes a file of each module an import() names, whether or not it runs, so the main entry, from which
+    //an app takes addLessonTexts(), must reach none
+    const reached = new Set<string>();
+    const visit = (file: string) => {
+      if (reached.has(file)) return;
+      reached.add(file);
+      //its code, without its comments, whose examples may name an import()
+      const code = fs
+        .readFileSync(file, 'utf8')
+        .replace(/\/\*[\s\S]*?\*\//g, '')
+        .replace(/^\s*\/\/.*$/gm, '');
+      expect(code, path.relative(ROOT, file)).not.toMatch(/\bimport\(/);
+      for (const [, type, from] of code.matchAll(
+        /(?:^|\n)\s*(?:import|export)\s+(type\s+)?(?:[^;'"]*?\sfrom\s+)?'([^']+)'/g
+      )) {
+        if (!type && from.startsWith('.')) visit(path.resolve(path.dirname(file), from));
+      }
+    };
+    visit(path.join(ROOT, 'src', 'index.ts'));
+    expect([...reached].some(file => file.includes(`${path.sep}i18n${path.sep}`))).toBe(false);
+    expect(fs.readFileSync(path.join(ROOT, 'src', 'load.ts'), 'utf8')).toMatch(/import\('\.\/i18n\//);
+  });
+
   it('are added from their entries, as an app loads them', async () => {
     for (const language of OTHERS) {
       const {default: texts} = (await import(`../src/i18n/${language}.ts`)) as {default: LessonTexts};

@@ -10,6 +10,10 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./load": {
+      "types": "./dist/load.d.ts",
+      "default": "./dist/load.js"
+    },
     "./i18n/*": {
       "types": "./dist/i18n/*.d.ts",
       "default": "./dist/i18n/*.js"

@@ -106,45 +106,46 @@ export const translatablesOf = (code: string): {texts: string[]; comments: strin
   };
 };
 
-//the lessons of each language but English, each a module of its own, loaded when the language is chosen; English
-//is the template of the others. A bundler finds each module in this map, and makes it a file of its own
-const LOADERS: Record<string, () => Promise<{default: LessonTexts}>> = {
-  ar: () => import('./i18n/ar.ts'),
-  ca: () => import('./i18n/ca.ts'),
-  cs: () => import('./i18n/cs.ts'),
-  da: () => import('./i18n/da.ts'),
-  de: () => import('./i18n/de.ts'),
-  el: () => import('./i18n/el.ts'),
-  'es-ES': () => import('./i18n/es-ES.ts'),
-  fi: () => import('./i18n/fi.ts'),
-  fr: () => import('./i18n/fr.ts'),
-  he: () => import('./i18n/he.ts'),
-  hu: () => import('./i18n/hu.ts'),
-  'hy-AM': () => import('./i18n/hy-AM.ts'),
-  it: () => import('./i18n/it.ts'),
-  ja: () => import('./i18n/ja.ts'),
-  ka: () => import('./i18n/ka.ts'),
-  ko: () => import('./i18n/ko.ts'),
-  nl: () => import('./i18n/nl.ts'),
-  no: () => import('./i18n/no.ts'),
-  pl: () => import('./i18n/pl.ts'),
-  'pt-PT': () => import('./i18n/pt-PT.ts'),
-  ro: () => import('./i18n/ro.ts'),
-  ru: () => import('./i18n/ru.ts'),
-  sk: () => import('./i18n/sk.ts'),
-  sl: () => import('./i18n/sl.ts'),
-  sq: () => import('./i18n/sq.ts'),
-  sr: () => import('./i18n/sr.ts'),
-  'sv-SE': () => import('./i18n/sv-SE.ts'),
-  th: () => import('./i18n/th.ts'),
-  uk: () => import('./i18n/uk.ts'),
-  vi: () => import('./i18n/vi.ts'),
-  'zh-CN': () => import('./i18n/zh-CN.ts')
-};
 const LESSON_TEXTS: Record<string, LessonTexts> = {en: ENGLISH};
 
-/** The languages the lessons are in, which are those of CMIL. */
-export const LESSON_LANGUAGES: readonly string[] = Object.freeze(['en', ...Object.keys(LOADERS)]);
+/**
+ * The languages the lessons are in, which are those of CMIL: English, and each language of an entry
+ * linguacode-lessons/i18n/<language>, which linguacode-lessons/load loads.
+ */
+export const LESSON_LANGUAGES: readonly string[] = Object.freeze([
+  'en',
+  'ar',
+  'ca',
+  'cs',
+  'da',
+  'de',
+  'el',
+  'es-ES',
+  'fi',
+  'fr',
+  'he',
+  'hu',
+  'hy-AM',
+  'it',
+  'ja',
+  'ka',
+  'ko',
+  'nl',
+  'no',
+  'pl',
+  'pt-PT',
+  'ro',
+  'ru',
+  'sk',
+  'sl',
+  'sq',
+  'sr',
+  'sv-SE',
+  'th',
+  'uk',
+  'vi',
+  'zh-CN'
+]);
 
 const isText = (value: unknown) => typeof value === 'string' && !!value.trim();
 const isTexts = (value: unknown) =>
@@ -167,7 +168,8 @@ const missingOf = (texts: LessonTexts): string[] => [
 
 /**
  * Adds the lessons of a language, like the default export of linguacode-lessons/i18n/<language>, which a page or an
- * app loads its own way, like a part of its own; lessonTextsOf() then gives them. A language that isn't one of
+ * app loads its own way, like a part of its own, or loadLessonTexts() of linguacode-lessons/load; lessonTextsOf() then
+ * gives them. A language that isn't one of
  * LESSON_LANGUAGES, English, which the lessons have already, and texts that lack a topic, a group, a lesson or an
  * exercise of the course, throw an error.
  *
@@ -176,21 +178,13 @@ const missingOf = (texts: LessonTexts): string[] => [
  */
 export const addLessonTexts = (language: string, texts: LessonTexts): void => {
   if (language === 'en') throw new Error('The lessons have their English texts already');
-  if (!Object.hasOwn(LOADERS, language)) throw new Error(`Unknown language of the lessons: ${language}`);
+  if (!LESSON_LANGUAGES.includes(language)) throw new Error(`Unknown language of the lessons: ${language}`);
   const missing = missingOf(texts);
   if (missing.length) {
     const more = missing.length > 3 ? ` and ${missing.length - 3} more` : '';
     throw new Error(`The lessons of ${language} have no text of ${missing.slice(0, 3).join(', ')}${more}`);
   }
   LESSON_TEXTS[language] = texts;
-};
-
-/**
- * Loads the lessons of a language, before they are shown, as addLessonTexts() adds them; English needs no loading.
- */
-export const loadLessonTexts = async (language: string): Promise<void> => {
-  const load = Object.hasOwn(LOADERS, language) ? LOADERS[language] : undefined;
-  if (load && !Object.hasOwn(LESSON_TEXTS, language)) addLessonTexts(language, (await load()).default);
 };
 
 //the lessons of a language that is loaded, else the English ones

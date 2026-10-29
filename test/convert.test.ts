@@ -8,7 +8,8 @@ import {promisify} from 'node:util';
 import {convert, languages, targets} from 'cmil';
 import {afterAll, beforeAll, describe, expect, it} from 'vitest';
 
-import {EXERCISES, LESSONS, lessonCode, loadLessonTexts, runWith} from '../src/index.ts';
+import {EXERCISES, LESSONS, lessonCode, runWith} from '../src/index.ts';
+import {loadLessonTexts} from '../src/load.ts';
 
 await Promise.all(languages.map(loadLessonTexts));
 

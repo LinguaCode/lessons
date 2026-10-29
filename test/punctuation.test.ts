@@ -2,7 +2,8 @@
 import {languages, quotesOf} from 'cmil';
 import {describe, expect, it} from 'vitest';
 
-import {LESSON_LANGUAGES, lessonTextsOf, loadLessonTexts} from '../src/index.ts';
+import {LESSON_LANGUAGES, lessonTextsOf} from '../src/index.ts';
+import {loadLessonTexts} from '../src/load.ts';
 
 await Promise.all(LESSON_LANGUAGES.map(loadLessonTexts));
 

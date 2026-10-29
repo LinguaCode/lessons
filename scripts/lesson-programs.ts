@@ -3,7 +3,8 @@
 import fs from 'node:fs';
 import {languages} from 'cmil';
 
-import {EXERCISES, LESSONS, lessonCode, lessonTextsOf, loadLessonTexts, localize} from '../src/index.ts';
+import {EXERCISES, LESSONS, lessonCode, lessonTextsOf, localize} from '../src/index.ts';
+import {loadLessonTexts} from '../src/load.ts';
 
 await Promise.all(languages.map(loadLessonTexts));
 const programs = languages.flatMap(language =>
